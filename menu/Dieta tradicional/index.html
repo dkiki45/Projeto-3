@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diet for Life - Dietas Tradicionais</title>
-    <link rel="stylesheet" href="../styles.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css"> <link rel="stylesheet" href="dieta-tradicional.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -12,21 +13,47 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Menu</a></li>
-                <li><a href="../Dieta Tradicional/index.html">Dietas Tradicionais</a></li>
-                <li><a href="../Dieta Vegana/index.html">Dietas Veganas</a></li>
+                <li><a href="index.html">Dietas Tradicionais</a></li> <li><a href="../Dieta Vegana/index.html">Dietas Veganas</a></li>
                 <li><a href="../Restaurante/index.html">Restaurantes</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="page-content">
-        <h1>Conteúdo sobre Dietas Tradicionais</h1>
-        <p>Aqui você encontrará informações e dicas sobre dietas tradicionais.</p>
-        </section>
+    <section class="page-header">
+        <h1>Dietas Tradicionais</h1>
+    </section>
+
+    <section class="audience-section">
+        <div class="card-container">
+            <div class="audience-card" data-audience="jovens">
+                <i class="fas fa-dumbbell card-icon"></i> <h3>Jovens Adultos (18-30 anos)</h3>
+                <p><strong>Público Fitness / Estético</strong></p>
+                <p class="description">Ganho de massa muscular, definição corporal, performance física.</p>
+            </div>
+
+            <div class="audience-card" data-audience="meia-idade">
+                <i class="fas fa-briefcase card-icon"></i> <h3>Adultos de Meia-idade (31-50 anos)</h3>
+                <p><strong>Público Corporativo / Alta Rotina</strong></p>
+                <p class="description">Manutenção de peso, energia durante o dia, saúde preventiva.</p>
+            </div>
+
+            <div class="audience-card" data-audience="idosos">
+                <i class="fas fa-leaf card-icon"></i> <h3>Idosos (60+ anos)</h3>
+                <p><strong>Público Saúde e Longevidade</strong></p>
+                <p class="description">Manter massa magra, preservar funções cognitivas e imunidade.</p>
+            </div>
+        </div>
+        <button class="back-button" style="display: none;">Voltar / Recolher</button>
+    </section>
+
+    <section class="meal-plan-section" style="display: none;">
+        <div class="meal-plan-content">
+            </div>
+    </section>
 
     <footer class="main-footer">
         <p>Diet for Life</p>
     </footer>
 
-</body>
+    <script src="../script.js"></script> <script src="dieta-tradicional.js"></script> </body>
 </html>

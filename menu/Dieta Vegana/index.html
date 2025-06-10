@@ -4,29 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diet for Life - Dietas Veganas</title>
-    <link rel="stylesheet" href="../styles.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css"> <link rel="stylesheet" href="dieta-vegana.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <header class="top-nav">
         <nav>
             <ul>
-                <li><a href="../index.html">MENU</a></li>
+                <li><a href="../index.html">Menu</a></li>
                 <li><a href="../Dieta Tradicional/index.html">Dietas Tradicionais</a></li>
-                <li><a href="../Dieta Vegana/index.html">Dietas Veganas</a></li>
-                <li><a href="../Restaurante/index.html">Restaurantes</a></li>
+                <li><a href="index.html">Dietas Veganas</a></li> <li><a href="../Restaurante/index.html">Restaurantes</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="page-content">
-        <h1>Conteúdo sobre Dietas Veganas</h1>
-        <p>Explore o mundo da alimentação vegana com nossas dicas e receitas.</p>
-        </section>
+    <section class="page-header">
+        <h1>Dietas Veganas</h1>
+    </section>
+
+    <section class="audience-section">
+        <div class="card-container">
+            <div class="audience-card" data-audience="iniciantes">
+                <i class="fas fa-seedling card-icon"></i> <h3>Iniciantes no Veganismo</h3>
+                <p><strong>Transição e Aprendizado</strong></p>
+                <p class="description">Descubra como começar uma dieta vegana de forma saudável e sustentável.</p>
+            </div>
+
+            <div class="audience-card" data-audience="ativos">
+                <i class="fas fa-running card-icon"></i> <h3>Veganos Ativos</h3>
+                <p><strong>Performance e Energia</strong></p>
+                <p class="description">Planos para atletas e pessoas com alta demanda energética, mantendo a vitalidade.</p>
+            </div>
+
+            <div class="audience-card" data-audience="familiares">
+                <i class="fas fa-apple-alt card-icon"></i> <h3>Famílias Veganas</h3>
+                <p><strong>Nutrição para Todos</strong></p>
+                <p class="description">Opções nutritivas e saborosas para todas as idades, do preparo ao dia a dia.</p>
+            </div>
+        </div>
+        <button class="back-button" style="display: none;">Voltar / Recolher</button>
+    </section>
+
+    <section class="meal-plan-section" style="display: none;">
+        <div class="meal-plan-content">
+            </div>
+    </section>
 
     <footer class="main-footer">
         <p>Diet for Life</p>
     </footer>
 
-</body>
+    <script src="../script.js"></script> <script src="dieta-vegana.js"></script> </body>
 </html>

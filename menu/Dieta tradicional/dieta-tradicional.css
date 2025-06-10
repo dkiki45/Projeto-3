@@ -1,0 +1,294 @@
+/* dieta-tradicional.css */
+
+/* Título da Página */
+.page-header {
+    background-color: white; /* Fundo branco para o cabeçalho da página */
+    padding: 60px 0; /* Mais padding para o título */
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    margin-bottom: 40px; /* Espaço abaixo do cabeçalho */
+}
+
+.page-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5em; /* Tamanho grande para o título */
+    color: #A8E6A1; /* Verde-claro suave */
+    font-weight: 700; /* Negrito */
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05); /* Sombra de texto sutil */
+}
+
+/* Seção de Públicos (Cartões) */
+.audience-section {
+    padding: 40px 5%; /* Padding para a seção inteira */
+    display: flex;
+    flex-direction: column; /* Para alinhar o container e o botão verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: #f0f2f5; /* Fundo cinza muito claro, consistente com body */
+}
+
+.audience-section .card-container {
+    display: flex;
+    justify-content: center; /* Centraliza os cartões horizontalmente */
+    flex-wrap: nowrap; /* <-- ALTERADO: Impede que os cartões quebrem linha, mantendo-os um ao lado do outro */
+    gap: 30px; /* Espaçamento equidistante entre os cartões */
+    max-width: 1200px; /* Largura máxima para os cartões */
+    margin-bottom: 40px; /* Espaço entre os cartões e o botão Voltar */
+}
+
+.audience-card {
+    background-color: white;
+    border-radius: 12px; /* Cantos mais arredondados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Sombra mais pronunciada */
+    padding: 30px;
+    width: 320px; /* Largura generosa para o cartão */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px; /* Altura mínima para harmonia */
+    flex-shrink: 0; /* <-- NOVO: Impede que os cartões encolham */
+    flex-grow: 0; /* <-- NOVO: Impede que os cartões cresçam */
+}
+
+.audience-card:hover {
+    transform: translateY(-8px); /* Efeito de elevação sutil no hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18); /* Sombra mais intensa no hover */
+    background-color: #e6ffe6; /* Fundo verde claro no hover */
+}
+
+.audience-card.expanded {
+    width: 100%; /* Expande para 100% da largura do container */
+    max-width: 100%; /* Garante que não ultrapasse */
+    margin-bottom: 30px; /* Espaço abaixo do cartão expandido */
+    transform: none; /* Remove transformação de hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais forte para o expandido */
+    background-color: white;
+    cursor: default; /* Remove cursor de ponteiro */
+    flex-direction: row; /* Alinha o conteúdo em linha */
+    justify-content: flex-start; /* Alinha à esquerda */
+    align-items: center;
+    padding: 40px; /* Aumenta o padding */
+    position: relative; /* Para posicionar o botão fechar se quiser */
+}
+
+.audience-card.expanded .description {
+    max-width: 60%; /* Limita a largura da descrição em modo expandido */
+    text-align: left; /* Alinha a descrição à esquerda */
+    margin-left: 30px; /* Espaço entre o ícone/título e a descrição */
+}
+
+.card-icon {
+    font-size: 4em; /* Ícones grandes */
+    color: #4CAF50; /* Verde vibrante */
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.audience-card.expanded .card-icon {
+    font-size: 5em; /* Ícone um pouco maior quando expandido */
+    margin-right: 30px; /* Espaço à direita do ícone */
+    margin-bottom: 0;
+}
+
+.audience-card h3 {
+    font-size: 1.8em; /* Título do cartão */
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.audience-card p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.audience-card.expanded p {
+    font-size: 1.2em; /* Texto maior quando expandido */
+}
+
+/* Botão Voltar/Recolher */
+.back-button {
+    background-color: #f44336; /* Vermelho para o botão voltar */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 20px; /* Espaço acima do botão */
+}
+
+.back-button:hover {
+    background-color: #d32f2f; /* Vermelho mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+/* Seção do Plano Alimentar */
+.meal-plan-section {
+    background-color: #F2F2F2; /* Fundo cinza claro */
+    padding: 60px 5%;
+    margin-top: 30px; /* Espaço acima da seção do plano */
+    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra interna sutil */
+    border-top: 1px solid #ddd; /* Linha divisória superior */
+}
+
+.meal-plan-content h3 {
+    font-size: 2em;
+    color: #4CAF50; /* Título verde */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.meal-category {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.meal-category h4 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #A8E6A1; /* Linha verde clara abaixo da categoria */
+    padding-bottom: 5px;
+    display: inline-block; /* Para que a linha ocupe apenas a largura do texto */
+}
+
+.meal-category ul {
+    list-style: none; /* Remove bullets padrão */
+    padding: 0;
+    margin: 0;
+}
+
+.meal-category ul li {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px; /* <-- ALTERADO: Aumenta a margem inferior para mais espaçamento entre os itens */
+    padding: 8px 0; /* <-- NOVO: Adiciona padding vertical para mais espaço ao redor do texto */
+    position: relative;
+    padding-left: 30px; /* <-- ALTERADO: Aumenta o espaço para o bullet customizado */
+}
+
+/* Bullet customizado (um pequeno círculo verde) */
+.meal-category ul li::before {
+    content: '\2022'; /* Código Unicode para um bullet */
+    color: #4CAF50; /* Cor do bullet */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 10px; /* <-- ALTERADO: Ajusta a posição do bullet para alinhar melhor */
+    top: 50%; /* Centraliza verticalmente o bullet */
+    transform: translateY(-50%); /* Ajuste fino para o centro */
+    font-size: 1.2em; /* Deixa o bullet um pouco maior */
+}
+
+/* Responsividade para a página Dieta Tradicional */
+@media (max-width: 1100px) { /* Novo breakpoint para ajustar o alinhamento antes dos 768px */
+    .audience-section .card-container {
+        flex-wrap: wrap; /* Permite que os cartões quebrem linha para telas médias */
+        gap: 25px;
+    }
+    .audience-card {
+        width: 300px; /* Ajusta largura para caber dois por linha, por exemplo */
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5em;
+    }
+
+    .audience-section .card-container {
+        flex-direction: column; /* Empilha os cartões */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .audience-card {
+        width: 90%; /* Ocupa mais largura em mobile */
+        max-width: 350px; /* Limita a largura máxima */
+        padding: 25px;
+        min-height: 250px;
+    }
+
+    .audience-card.expanded {
+        flex-direction: column; /* Volta a empilhar quando expandido em mobile */
+        padding: 30px;
+        align-items: center;
+        width: 100%; /* Ocupa 100% da largura */
+    }
+
+    .audience-card.expanded .card-icon {
+        font-size: 4em;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .audience-card.expanded .description {
+        max-width: 100%; /* Descrição ocupa toda a largura */
+        text-align: center; /* Centraliza texto */
+        margin-left: 0;
+    }
+
+    .card-icon {
+        font-size: 3.5em;
+    }
+
+    .audience-card h3 {
+        font-size: 1.5em;
+    }
+
+    .audience-card p {
+        font-size: 1em;
+    }
+
+    .meal-plan-section {
+        padding: 40px 3%;
+    }
+
+    .meal-plan-content h3 {
+        font-size: 1.8em;
+    }
+
+    .meal-category h4 {
+        font-size: 1.3em;
+    }
+
+    .meal-category ul li {
+        font-size: 1em;
+        margin-bottom: 10px; /* Ajuste para mobile */
+        padding: 5px 0; /* Ajuste para mobile */
+        padding-left: 25px;
+    }
+    .meal-category ul li::before {
+        left: 5px; /* Ajuste para mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 2em;
+        padding: 40px 0;
+    }
+
+    .audience-card {
+        padding: 20px;
+        min-height: 220px;
+    }
+
+    .audience-card h3 {
+        font-size: 1.3em;
+    }
+}
