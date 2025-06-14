@@ -50,6 +50,7 @@ body {
 .hero-section {
     background-color: white; 
     padding: 80px 5%;
+    height: 50vh;
     min-height: 400px; /* Altura mínima ajustada */
     display: flex;
     align-items: center;

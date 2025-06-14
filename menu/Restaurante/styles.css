@@ -1,0 +1,88 @@
+body{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#divDoTituloRest{
+    background-image: url('restauranteimagemfundotit.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    font-size: 60px;
+    color: azure;
+    text-shadow: 2px 2px 6px black;
+    border-radius: 15px;
+}
+#divDoTituloRest p {
+    font-size: 25px;
+}
+
+#ElementsFiltroEnfeite{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#FirstRestElements{
+    margin-top: 20px;
+    background-color: #ffffff00; /* #e0f7e9;    */
+    display: flex; 
+    border-radius: 8px;
+    height: 50px;
+    padding-right: 80px;
+}
+
+.check2{
+    width: 100px;
+    height: 50px;
+    color:rgb(255, 255, 255);
+    background-color: rgb(13, 73, 26); 
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+    border-radius: 4px;
+}
+
+.check1{
+    width: 100px;
+    height: 50px;
+    color:rgb(0, 0, 0);
+    background-color: rgb(146, 255, 169); 
+    border: none;
+    cursor: pointer;
+    margin-left: 1px;
+    border-radius: 4px;
+}
+
+#todosRestaurantes{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    background-color: rgba(240, 248, 255, 0);
+    padding-left: 70px;
+
+}
+.restaurante{
+    display: flex;
+    background-color: aliceblue;
+    height: 400px;
+    width: 1200px;
+    border-radius: 10px;
+     box-shadow: 2px 2px 70px 1px rgba(126, 240, 132, 0.233);
+     margin-left: 20px;
+  justify-content: flex-start;
+    
+}
+.textoRests{
+    padding-left: 10px;
+    width: 750px;
+}
+#linkGoogleMaps{
+    margin-left: 100px;
+    margin-top: 25px;
+}
