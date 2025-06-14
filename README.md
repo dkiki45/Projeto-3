@@ -7,7 +7,7 @@
 O objetivo do **Diet For Life** é facilitar o acesso a informações confiáveis sobre alimentação equilibrada. O site apresenta:
 
 - 💡 **Dicas de alimentação saudável**
-- 🥦 **Dietas veganas** e 🍗 **não veganas**, separadas por grupos alimentares
+- 🥦 **Dietas veganas** e 🍗 **não veganas**, separadas por grupos 
 - 🍽️ **Sugestões de restaurantes** localizados em **Curitiba/PR** que oferecem opções saudáveis
 
 ## 🛠️ Tecnologias Utilizadas
@@ -15,6 +15,3 @@ O objetivo do **Diet For Life** é facilitar o acesso a informações confiávei
 - **HTML5** – Estruturação do conteúdo
 - **CSS3** – Estilização responsiva e visual moderno
 - **JavaScript (ES6)** – Funcionalidades interativas e dinâmicas
-
-## 📁 Estrutura do Projeto
-
