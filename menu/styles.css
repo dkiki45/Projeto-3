@@ -36,7 +36,7 @@ body {
     font-size: 1.1em;
     padding: 8px 15px; /* Padding para a área clicável */
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.6s ease, color 0.6s ease;
     white-space: nowrap;
 }
 
@@ -120,7 +120,7 @@ body {
 .content-section h2 {
     color: #333;
     font-size: 2.5em; /* Tamanho maior para títulos de seção */
-    margin-bottom: 50px; /* Mais espaço abaixo do título */
+    margin-bottom: 90px; /* Mais espaço abaixo do título */
     display: inline-block;
     padding-bottom: 8px;
     border-bottom: 3px solid #4CAF50; /* Linha mais grossa sob o título */
@@ -130,15 +130,19 @@ body {
 .blocks-container {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Espaçamento aumentado entre os blocos (era 32px) */
+    gap: 10vw; /* Espaçamento aumentado entre os blocos (era 32px) */
     flex-wrap: wrap;
 }
 
+
 .content-block {
+    transition: all;
+    transition-duration: 400ms;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 250px; /* Aumentado para 250px para caber os 250px dos blocos */
+    width: 20vw; /* Aumentado para 250px para caber os 250px dos blocos */
+    min-width: 300px;
     text-align: center;
     margin-bottom: 30px; /* Espaço quando empilhados em mobile */
     background-color: white; /* Fundo branco para cada bloco */
@@ -147,8 +151,14 @@ body {
     overflow: hidden; /* Garante que as bordas arredondadas do pai se apliquem aos filhos */
 }
 
+.content-block:hover {
+    scale: 1.1;
+    box-shadow: 0 7px 50px rgba(0, 0, 0, 0.2);
+}
+
 .square-block {
-    width: 250px; /* Aumentado para 250px x 250px */
+    width: 20vw; /* Aumentado para 250px x 250px */
+    min-width: 300px;
     height: 250px; /* Aumentado para 250px x 250px */
     background-color: #F5F5F5; /* Cinza médio */
     border-radius: 10px 10px 0 0; /* Apenas cantos superiores arredondados */
@@ -169,7 +179,8 @@ body {
 }
 
 .vertical-rectangle-block {
-    width: 250px; /* Mesma largura do quadrado (250px) */
+    width: 20vw; /* Mesma largura do quadrado (250px) */
+    min-width: 300px;
     height: 350px; /* Altura proporcionalmente maior: 350px (era 300px) */
     background-color: #EEEEEE; /* Cinza claro */
     border-radius: 0 0 10px 10px; /* Apenas cantos inferiores arredondados */
