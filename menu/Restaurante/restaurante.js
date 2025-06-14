@@ -1,5 +1,6 @@
 const buttonVegano = document.getElementById("button-vegano");
 const buttonNaoVegano = document.getElementById("button-nao-vegano")
+const buttonTodos = document.getElementById("button-todos")
 const todosRestaurantesDom = document.getElementById("todosRestaurantes")
 
 const restaurantes = [
@@ -11,10 +12,12 @@ const restaurantes = [
       "Ambiente: moderno e funcional, ideal para refeições leves com proteína animal",
       "Extras: pratos montáveis (você escolhe a proteína, carbo e salada)"
     ],
+    endereco: "Rua Lamenha Lins, 800",
     telefone: "(41) 99204-8304",
     horario: "10:30‑22:00h",
     apenasDelivery: true,
-    vegano: false
+    vegano: false,
+    googleMaps: "https://www.google.com/maps/search/?api=1&query=Verd+%26+Co+Curitiba"
   },
   {
     nome: "Quitana Gastronomia",
@@ -27,7 +30,9 @@ const restaurantes = [
     endereco: "Av. do Batel, 1440",
     telefone: "(41) 99235-6044",
     horario: "Seg‑Sex 11:30‑14:30; Sáb‑Dom e feriados 11:30‑15:30",
-    vegano: false
+    apenasDelivery: false,
+    vegano: false,
+    googleMaps: "https://www.google.com/maps/place/Quintana+Gastronomia/@-25.441833,-49.287054,17z"
   },
   {
     nome: "All Natural",
@@ -40,7 +45,9 @@ const restaurantes = [
     endereco: "R. Bento Viana, 912 – Água Verde",
     telefone: "(41) 99256-8999",
     horario: "Seg‑Sex 9:00‑22:00; Sáb 9:00‑17:00",
-    vegano: false
+    apenasDelivery: false,
+    vegano: false,
+    googleMaps: "https://www.google.com/maps/place/all+natural+batel/data=!4m2!3m1!1s0x94dce578cc3cb939:0x84e37c51748cbf5a"
   },
   {
     nome: "Mezmiz",
@@ -53,7 +60,9 @@ const restaurantes = [
     endereco: "R. Brasílio Itiberê, 4412 – Água Verde",
     telefone: "(41) 3343‑2007",
     horario: "Seg‑Sáb 11:00‑22:30; Dom 11:00‑15:30",
-    vegano: false
+    apenasDelivery: false,
+    vegano: false,
+    googleMaps: "https://www.google.com/maps/place/Mezmiz/@-25.4533801,-49.2862265,17z"
   },
   {
     nome: "General Gastronomia",
@@ -64,9 +73,11 @@ const restaurantes = [
       "Extras: foco em ingredientes locais e sazonais"
     ],
     endereco: "Rua Guilherme Pugsley, 1483 – Água Verde",
-    telefone: "(41) 98851‑6493",
+    telefone: "(41) 98851-6493",
     horario: "Seg‑Sáb 11:15‑15:00 & 18:30‑23:30",
-    vegano: false
+    apenasDelivery: false,
+    vegano: false,
+    googleMaps: "https://www.google.com/maps/place/General+Gastronomia/data=!4m2!3m1!1s0x0:0x8bcaebbf2275f662"
   },
   {
     nome: "GreenGo",
@@ -79,7 +90,9 @@ const restaurantes = [
     endereco: "Alameda Dr. Carlos de Carvalho, 1282 – Bigorrilho",
     telefone: "(41) 3347‑4957",
     horario: "Seg‑Sex 11:00‑15:00 / 18:00‑22:00; Sáb 11:00‑22:00; Dom 12:00‑16:00",
-    vegano: true
+    apenasDelivery: false,
+    vegano: true,
+    googleMaps: "https://www.google.com/maps/place/greengo/data=!4m2!3m1!1s0x94dce3f4d3b04831:0x1f26fa83996f1338"
   },
   {
     nome: "Viva la Vegan",
@@ -92,7 +105,9 @@ const restaurantes = [
     endereco: "R. Presidente Carlos Cavalcanti, 566 – Centro",
     telefone: "(41) 3149‑3939",
     horario: "Seg‑Sáb 11:00‑22:00",
-    vegano: true
+    apenasDelivery: false,
+    vegano: true,
+    googleMaps: "https://www.google.com/maps/place/Viva+la+Vegan/data=!4m2!3m1!1s0x0:0xa259c8ab5b3ac7e1"
   },
   {
     nome: "Semente de girassol",
@@ -105,7 +120,9 @@ const restaurantes = [
     endereco: "R. Mateus Leme, 115 – São Francisco",
     telefone: "(41) 3203‑5955",
     horario: "Seg‑Sáb 11:00‑20:00; Dom 11:00‑17:00",
-    vegano: true
+    apenasDelivery: false,
+    vegano: true,
+    googleMaps: "https://www.google.com/maps/place/semente+de+girassol+restaurante+curitiba/data=!4m2!3m1!1s0x94dce413c9f3bd29:0xc592c4718ab25748"
   },
   {
     nome: "Mada Pizza e Vinho",
@@ -116,9 +133,11 @@ const restaurantes = [
       "Extras: excelente carta de vinhos"
     ],
     endereco: "R. Saldanha Marinho, 1230 – Centro",
-    telefone: "(41) 99561‑7213",
+    telefone: "(41) 99561-7213",
     horario: "Dom‑Qua 18:30‑23:00; Qui 18:00‑00:00; Sex‑Sáb 18:30‑00:00",
-    vegano: false
+    apenasDelivery: false,
+    vegano: false,
+    googleMaps: "https://www.google.com/maps/place/Mad%C3%A1+Pizza+e+Vinho/@-25.4329134,-49.283369,17z"
   },
   {
     nome: "Maria Eugênia",
@@ -129,11 +148,14 @@ const restaurantes = [
       "Extras: gastronomia de excelência"
     ],
     endereco: "R. Cap. Antônio Pedri, 408 – Santa Felicidade",
-    telefone: "(41) 99788‑0080",
+    telefone: "(41) 99788-0080",
     horario: "Dom 12:30‑17:00; Qua‑Qui 19:00‑23:30; Sex‑Sáb 12:00‑16:00 & 19:00‑23:30",
-    vegano: false
+    apenasDelivery: false,
+    vegano: false,
+    googleMaps: "https://www.google.com/maps/place/maria+eugenia+restaurante/data=!4m2!3m1!1s0x94dce119df0d6889:0x7fc3dfc1e1c72688"
   }
-]
+];
+
 
 function Restaurante({ imagem, nome, descricao, endereco, telefone, horario }) {
   return `
@@ -149,6 +171,11 @@ function Restaurante({ imagem, nome, descricao, endereco, telefone, horario }) {
         <p><strong>Funcionamento:</strong> ${horario}</p>
       </div>
     </div>
+    <div class = "linkGoogleMaps">
+        <a href="https://www.google.com/maps/place/Quintana+Gastronomia/@-25.441833,-49.287054,17z/data=!3m1!4b1!4m6!3m5!1s0x94dce3890b564277:0x75157260ead42611!8m2!3d-25.441833!4d-49.287054!16s%2Fg%2F1v8j1lc5?entry=ttu&g_ep=EgoyMDI1MDYwOS4xIKXMDSoASAFQAw%3D%3D">
+            <img src="googlemaps.png" alt="Endereço Google Maps" width="90px" >
+        </a>
+    </div>
   `;
 }
 
@@ -157,6 +184,8 @@ buttonVegano.addEventListener("click", () => {
     buttonVegano.classList.remove("check1")
     buttonNaoVegano.classList.add("check1")
     buttonNaoVegano.classList.remove("check2")
+    buttonTodos.classList.add("check1")
+    buttonTodos.classList.remove("check2")
     todosRestaurantesDom.innerHTML = ""
     restaurantesVeganos = restaurantes.filter(restaurante => restaurante.vegano)
     restaurantesVeganos.map((restaurante) => {
@@ -170,9 +199,24 @@ buttonNaoVegano.addEventListener("click", () => {
     buttonNaoVegano.classList.remove("check1")
     buttonVegano.classList.add("check1")
     buttonVegano.classList.remove("check2")
+    buttonTodos.classList.add("check1")
+    buttonTodos.classList.remove("check2")
     todosRestaurantesDom.innerHTML = ""
     restaurantesNaoVeganos = restaurantes.filter(restaurante => !restaurante.vegano)
     restaurantesNaoVeganos.map((restaurante) => {
+        todosRestaurantesDom.innerHTML += Restaurante(restaurante)
+    })
+})
+
+buttonTodos.addEventListener("click", () => {
+    buttonTodos.classList.add("check2")
+    buttonTodos.classList.remove("check1")
+    buttonVegano.classList.add("check1")
+    buttonVegano.classList.remove("check2")
+    buttonNaoVegano.classList.add("check1")
+    buttonNaoVegano.classList.remove("check2")
+    todosRestaurantesDom.innerHTML = ""
+    restaurantes.map((restaurante) => {
         todosRestaurantesDom.innerHTML += Restaurante(restaurante)
     })
 })

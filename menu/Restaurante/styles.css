@@ -25,6 +25,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center; 
+    margin-bottom: 30px;
 }
 
 #FirstRestElements{
@@ -36,31 +37,36 @@ body{
     padding-right: 80px;
 }
 
-.check2{
+.check {
     width: 100px;
     height: 50px;
     color:rgb(255, 255, 255);
-    background-color: rgb(13, 73, 26); 
     border: none;
     cursor: pointer;
     margin-left: 20px;
-    border-radius: 4px;
+    border-radius: 8px;
+}
+
+.check2{
+    color:rgb(255, 255, 255);
+    background-color: rgb(13, 73, 26); 
 }
 
 .check1{
-    width: 100px;
-    height: 50px;
+    transition: all;
+    transition-duration: 300ms;
     color:rgb(0, 0, 0);
     background-color: rgb(146, 255, 169); 
-    border: none;
-    cursor: pointer;
-    margin-left: 1px;
-    border-radius: 4px;
 }
+
+.check1:hover {
+    background-color: rgb(219, 255, 227); 
+}  
 
 #todosRestaurantes{
     display: flex;
     flex-direction: column;
+    gap: 30px;
     justify-content: left;
     align-items: left;
     background-color: rgba(240, 248, 255, 0);
@@ -70,14 +76,23 @@ body{
 .restaurante{
     display: flex;
     background-color: aliceblue;
+    border-radius: 10px;
+    overflow: hidden;
     height: 400px;
     width: 1200px;
     border-radius: 10px;
-     box-shadow: 2px 2px 70px 1px rgba(126, 240, 132, 0.233);
-     margin-left: 20px;
-  justify-content: flex-start;
-    
+    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    justify-content: flex-start;   
+    transition: all;
+    transition-duration: 400ms;
 }
+
+.restaurante:hover {
+    scale: 1.04;
+    box-shadow: 2px 2px 50px 1px rgba(0, 0, 0, 0.3);
+}
+
 .textoRests{
     padding-left: 10px;
     width: 750px;
