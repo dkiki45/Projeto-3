@@ -157,7 +157,7 @@ const restaurantes = [
 ];
 
 
-function Restaurante({ imagem, nome, descricao, endereco, telefone, horario }) {
+function Restaurante({ imagem, nome, descricao, endereco, telefone, horario, googleMaps }) {
   return `
     <div class="restaurante">
       <img src="${imagem}" alt="${nome}" width="400px">
@@ -166,15 +166,10 @@ function Restaurante({ imagem, nome, descricao, endereco, telefone, horario }) {
         <ul>
           ${descricao.map(item => `<li>${item}</li>`).join('')}
         </ul>
-        <p><strong>Endereço:</strong> ${endereco}</p>
+        <p><strong>Endereço:</strong> <a href="${googleMaps}" target="_blank">${endereco}</a></p>
         <p><strong>Telefone:</strong> ${telefone}</p>
         <p><strong>Funcionamento:</strong> ${horario}</p>
       </div>
-    </div>
-    <div class = "linkGoogleMaps">
-        <a href="https://www.google.com/maps/place/Quintana+Gastronomia/@-25.441833,-49.287054,17z/data=!3m1!4b1!4m6!3m5!1s0x94dce3890b564277:0x75157260ead42611!8m2!3d-25.441833!4d-49.287054!16s%2Fg%2F1v8j1lc5?entry=ttu&g_ep=EgoyMDI1MDYwOS4xIKXMDSoASAFQAw%3D%3D">
-            <img src="googlemaps.png" alt="Endereço Google Maps" width="90px" >
-        </a>
     </div>
   `;
 }
