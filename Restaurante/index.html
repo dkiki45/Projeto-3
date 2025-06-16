@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diet for Life - Restaurantes</title>
-    <link rel="stylesheet" href="styles.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="restaurante.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
+
     <header class="top-nav">
         <nav>
             <ul>
@@ -23,207 +21,35 @@
             </ul>
         </nav>
     </header>
-    <section id="divDoTituloRest" class="page-content">
+
+    <section id="page-header-restaurantes" class="page-header">
         <h1>Restaurantes Recomendados</h1>
-        <p>Descubra os melhores restaurantes com opções sustentáveis e saudáveis perto de você.</p>
     </section>
-    <div id="ElementsFiltroEnfeite">
-        <div id="FirstRestElements">
-            <button id="button-todos" class="check check1">Todos</button>
-            <button id="button-vegano" class="check check1">Vegano</button>
-            <button id="button-nao-vegano" class="check check1">Não Vegano</button>
-        </div>
-    </div>
 
-    <div id="todosRestaurantes">
-
-        <!-- Verd & Co -->
-        <div id="verdCo" class="restaurante">
-            <div id="imagemVerdCodiv">
-                <img src="imagemVerdCo.jpg" alt="Verd & Co" width="400px">
+    <section class="restaurant-category-section">
+        <div class="category-card-container">
+            <div class="category-card" data-category="veganos" role="button" tabindex="0" aria-label="Ver restaurantes veganos">
+                <i class="fas fa-seedling card-icon" aria-hidden="true"></i>
+                <h3>Veganos</h3>
             </div>
-            <div class="textoRests">
-                <h1>Verd & Co</h1>
-                <ul>
-                    <li>Destaques: frango grelhado com quinoa, omeletes proteicos, salmão, arroz negro, sucos detox</li>
-                    <li>Ambiente: moderno e funcional, ideal para refeições leves com proteína animal</li>
-                    <li>Extras: pratos montáveis (você escolhe a proteína, carbo e salada)</li>
-                </ul>
-                <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=Rua+Lamenha+Lins,+800" target="_blank">Rua Lamenha Lins, 800 (Ver no Google Maps)</a></p>
-                <p><strong>Telefone:</strong> (41) 99204-8304</p>
-                <p><strong>Funcionamento Delivery:</strong> 10:30‑22:00h</p>
-                <p>Apenas Delivery</p>
+
+            <div class="category-card" data-category="tradicionais" role="button" tabindex="0" aria-label="Ver restaurantes tradicionais">
+                <i class="fas fa-utensils card-icon" aria-hidden="true"></i>
+                <h3>Tradicionais</h3>
             </div>
         </div>
+        <button class="back-button" style="display: none;">Voltar / Recolher</button>
+    </section>
 
-        <!-- Quitana Gastronomia -->
-        <div id="quitana" class="restaurante">
-            <div id="imgquitana">
-                <img src="imagemQuitana.jpg" alt="Quitana Gastronomia" width="400px">
+    <section id="restaurants-list-section" class="restaurants-list-section hidden-section" aria-live="polite">
+        <div id="todosRestaurantes" class="restaurants-grid-container">
             </div>
-            <div class="textoRests">
-                <h1>Quitana Gastronomia</h1>
-                <ul>
-                    <li>Destaques: ingredientes sazonais, sabores do mundo</li>
-                    <li>Ambiente: atual, saudável, com foco em comida orgânica sustentável</li>
-                    <li>Extras: cardápio à la carte disponível diariamente</li>
-                </ul>
-                <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=Av.+do+Batel,+1440" target="_blank">Av. do Batel, 1440 (Ver no Google Maps)</a></p>
-                <p><strong>Telefone:</strong> (41) 99235-6044</p>
-                <p><strong>Funcionamento:</strong> Seg‑Sex 11:30‑14:30; Sáb‑Dom e feriados 11:30‑15:30</p>
-            </div>
-        </div>
-
-        <!-- All Natural -->
-        <div id="All Natural" class="restaurante">
-            <div id="imgAllNatural">
-                <img src="imgAllNatural.jpg" alt="All Natural" width="400px">
-            </div>
-            <div class="textoRests">
-                <h1>All Natural</h1>
-                <ul>
-                    <li>Destaques: pratos frescos, saborosos e saudáveis</li>
-                    <li>Ambiente: descontraído com ênfase em fornecedores locais</li>
-                    <li>Extras: variedade de refeições para todos os momentos do dia</li>
-                </ul>
-                <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=R.+Bento+Viana,+912,+Água+Verde" target="_blank">R. Bento Viana, 912 – Água Verde (Ver no Google Maps)</a></p>
-                <p><strong>Telefone:</strong> (41) 99256-8999</p>
-                <p><strong>Funcionamento:</strong> Seg‑Sex 9:00‑22:00; Sáb 9:00‑17:00</p>
-            </div>
-        </div>
-
-        <!-- Mezmiz -->
-        <div id="Mezmiz" class="restaurante">
-            <div id="imgMezmiz">
-                <img src="mezmizimgoficial.jpg" alt="Mezmiz" width="400px">
-            </div>
-            <div class="textoRests">
-                <h1>Mezmiz</h1>
-                <ul>
-                    <li>Destaques: metade do cardápio sem carne, opções veganas/liberais</li>
-                    <li>Ambiente: redução significativa de resíduos</li>
-                    <li>Extras: culinária libanesa com toque sustentável</li>
-                </ul>
-                <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=R.+Brasílio+Itiberê,+4412,+Água+Verde" target="_blank">R. Brasílio Itiberê, 4412 – Água Verde (Ver no Google Maps)</a></p>
-                <p><strong>Telefone:</strong> (41) 3343‑2007</p>
-                <p><strong>Funcionamento:</strong> Seg‑Sáb 11:00‑22:30; Dom 11:00‑15:30</p>
-            </div>
-        </div>
-
-        <!-- General Gastronomia -->
-        <div id="GeneralGastronomia" class="restaurante">
-            <div id="imgGeneralKrupa">
-                <img src="generalkrupa.JPG" alt="General Gastronomia" width="400px">
-            </div>
-            <div class="textoRests">
-                <h1>General Gastronomia</h1>
-                <ul>
-                    <li>Destaques: técnicas refinadas e receitas elaboradas</li>
-                    <li>Ambiente: aproveitamento integral de ingredientes</li>
-                    <li>Extras: foco em ingredientes locais e sazonais</li>
-                </ul>
-                <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=Rua+Guilherme+Pugsley,+1483" target="_blank">Rua Guilherme Pugsley, 1483 – Água Verde (Ver no Google Maps)</a></p>
-                <p><strong>Telefone:</strong> (41) 98851‑6493</p>
-                <p><strong>Funcionamento:</strong> Seg‑Sáb 11:15‑15:00 & 18:30‑23:30</p>
-            </div>
-        </div>
-
-        <!-- GreenGo -->
-        <div id="greengo" class="restaurante">
-            <div id="greengoimg">
-                <img src="imgGreenGo.jpg" alt="GreenGo" width="400px">
-            </div>
-            <div class="textoRests">
-                <h1>GreenGo</h1>
-                <ul>
-                    <li>Destaques: grande variedade de opções saudáveis e veganas</li>
-                    <li>Ambiente: ideal para eventos sociais e networking</li>
-                    <li>Extras: cardápio sazonal e renovado</li>
-                </ul>
-                <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=Alameda+Dr.+Carlos+de+Carvalho,+1282" target="_blank">Alameda Dr. Carlos de Carvalho, 1282 – Bigorrilho (Ver no Google Maps)</a></p>
-                <p><strong>Telefone:</strong> (41) 3347‑4957</p>
-                <p><strong>Funcionamento:</strong> Seg‑Sex 11:00‑15:00 / 18:00‑22:00; Sáb 11:00‑22:00; Dom 12:00‑16:00</p>
-            </div>
-        </div>
-
-        <!-- Viva la Vegan -->
-        <div id="vivalavengan" class="restaurante">
-            <div id="vivalavenganimg">
-                <img src="vivalaveganimg.JPG" alt="Viva la Vegan" width="400px">
-            </div>
-            <div class="textoRests">
-                <h1>Viva la Vegan</h1>
-                <ul>
-                    <li>Destaques: amplo cardápio com boas opções veganas</li>
-                    <li>Ambiente: descontraído, boa relação custo‑benefício</li>
-                    <li>Extras: porções generosas e bem servidas</li>
-                </ul>
-                <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=R.+Presidente+Carlos+Cavalcanti,+566" target="_blank">R. Presidente Carlos Cavalcanti, 566 – Centro (Ver no Google Maps)</a></p>
-                <p><strong>Telefone:</strong> (41) 3149‑3939</p>
-                <p><strong>Funcionamento:</strong> Seg‑Sáb 11:00‑22:00</p>
-            </div>
-        </div>
-
-        <!-- Semente de girassol -->
-        <div id="semendegirassol" class="restaurante">
-            <div id="semendegirassolimg">
-                <img src="girassolimg.JPG" alt="Semente de girassol" width="400px">
-            </div>
-            <div class="textoRests">
-                <h1>Semente de girassol</h1>
-                <ul>
-                    <li>Destaques: buffet livre vegano com empório de produtos</li>
-                    <li>Ambiente: descontraído, ótimo custo‑benefício</li>
-                    <li>Extras: temperos saborosos e caseiros</li>
-                </ul>
-                <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=R.+Mateus+Leme,+115" target="_blank">R. Mateus Leme, 115 – São Francisco (Ver no Google Maps)</a></p>
-                <p><strong>Telefone:</strong> (41) 3203‑5955</p>
-                <p><strong>Funcionamento:</strong> Seg‑Sáb 11:00‑20:00; Dom 11:00‑17:00</p>
-            </div>
-        </div>
-
-        <!-- Mada Pizza e Vinho -->
-        <div id="madapizzaevinho" class="restaurante">
-            <div id="madapizzaevinhoimg">
-                <img src="madapizzaevinhoimg.JPG" alt="Mada Pizza e Vinho" width="400px">
-            </div>
-            <div class="textoRests">
-                <h1>Mada Pizza e Vinho</h1>
-                <ul>
-                    <li>Destaques: pizzas artesanais com forte compromisso sustentável</li>
-                    <li>Ambiente: acolhedor, ideal para grupos e jantares informais</li>
-                    <li>Extras: excelente carta de vinhos</li>
-                </ul>
-                <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=R.+Saldanha+Marinho,+1230" target="_blank">R. Saldanha Marinho, 1230 – Centro (Ver no Google Maps)</a></p>
-                <p><strong>Telefone:</strong> (41) 99561‑7213</p>
-                <p><strong>Funcionamento:</strong> Dom‑Qua 18:30‑23:00; Qui 18:00‑00:00; Sex‑Sáb 18:30‑00:00</p>
-            </div>
-        </div>
-
-        <!-- Maria Eugênia -->
-        <div id="mariaeugenia" class="restaurante">
-            <div id="mariaeugeniaimg">
-                <img src="mariaeugeniapng.JPG" alt="Maria Eugênia" width="400px">
-            </div>
-            <div class="textoRests">
-                <h1>Maria Eugênia</h1>
-                <ul>
-                    <li>Destaques: carta de vinhos e drinks sofisticados</li>
-                    <li>Ambiente: imersivo, em meio à natureza em Santa Felicidade</li>
-                    <li>Extras: gastronomia de excelência</li>
-                </ul>
-                <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=R.+Cap.+Antônio+Pedri,+408" target="_blank">R. Cap. Antônio Pedri, 408 – Santa Felicidade (Ver no Google Maps)</a></p>
-                <p><strong>Telefone:</strong> (41) 99788‑0080</p>
-                <p><strong>Funcionamento:</strong> Dom 12:30‑17:00; Qua‑Qui 19:00‑23:30; Sex‑Sáb 12:00‑16:00 & 19:00‑23:30</p>
-            </div>
-        </div>
-
-    </div>
+    </section>
 
     <footer class="main-footer">
         <p>Diet for Life</p>
     </footer>
-    <script src="restaurante.js"></script>
-</body>
 
+    <script src="restaurante.js" defer></script>
+</body>
 </html>
